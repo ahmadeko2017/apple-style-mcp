@@ -45,7 +45,7 @@ const SENSITIVE_KEY_PATTERN =
  * @returns {string} Teks yang telah disanitasi dari PII
  *
  * @example
- * const safeText = sanitizeSensitiveText("User ahmad@paylabs.co.id di C:\\Users\\Paylabs\\app");
+ * const safeText = sanitizeSensitiveText("User ahmad@example.com di C:\\Users\\Ahmad\\app");
  */
 export function sanitizeSensitiveText(rawText: string): string {
   return rawText

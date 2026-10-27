@@ -1,19 +1,30 @@
 {
   "name": "@ahmad/apple-style-mcp",
   "version": "2.0.0",
-  "description": "Model Context Protocol (MCP) server for enforcing, auditing, and scaffolding Apple HIG (macOS, iPadOS, iOS & Liquid Glass) applications",
+  "description": "Enterprise-grade Model Context Protocol (MCP) server for auditing, design tokens, and component scaffolding across macOS, iPadOS, and iOS (Apple HIG & Liquid Glass)",
   "type": "module",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
     "apple-style-mcp": "dist/index.js",
     "desktop-style-mcp": "dist/index.js"
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "engines": {
     "node": ">=22.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadeko2017/apple-style-mcp.git"
+  },
+  "homepage": "https://github.com/ahmadeko2017/apple-style-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/ahmadeko2017/apple-style-mcp/issues"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
@@ -35,10 +46,13 @@
     "ipados",
     "ios",
     "liquid-glass",
+    "swiftui",
     "tauri",
+    "react",
+    "design-tokens",
     "zero-shift"
   ],
-  "author": "Ahmad",
+  "author": "Ahmad Eko Kurniawan",
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",
