@@ -1,0 +1,22 @@
+# Dependensi
+node_modules/
+
+# Output build
+dist/
+coverage/
+
+# Log & cache
+*.log
+.eslintcache
+*.tsbuildinfo
+
+# File sensitif / lingkungan lokal
+.env*
+*.pem
+*.key
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

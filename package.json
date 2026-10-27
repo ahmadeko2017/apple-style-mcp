@@ -1,0 +1,25 @@
+{
+  "name": "@paylabs/desktop-style-mcp",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) server for enforcing and scaffolding macOS native & cross-platform desktop app styling",
+  "main": "src/index.ts",
+  "bin": {
+    "desktop-style-mcp": "src/index.ts"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "macos",
+    "tauri",
+    "apple-hig",
+    "desktop-styling",
+    "zero-shift"
+  ],
+  "author": "Paylabs Team",
+  "license": "MIT"
+}
