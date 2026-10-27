@@ -1,0 +1,5 @@
+# Normalisasi line ending ke LF di repository (konsisten lintas Windows/macOS/CI)
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ico binary

@@ -1,25 +1,58 @@
 {
-  "name": "@paylabs/desktop-style-mcp",
-  "version": "1.0.0",
-  "description": "Model Context Protocol (MCP) server for enforcing and scaffolding macOS native & cross-platform desktop app styling",
-  "main": "src/index.ts",
-  "bin": {
-    "desktop-style-mcp": "src/index.ts"
-  },
+  "name": "@ahmad/apple-style-mcp",
+  "version": "2.0.0",
+  "description": "Model Context Protocol (MCP) server for enforcing, auditing, and scaffolding Apple HIG (macOS, iPadOS, iOS & Liquid Glass) applications",
   "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "apple-style-mcp": "dist/index.js",
+    "desktop-style-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
-    "start": "tsx src/index.ts",
-    "test": "vitest run"
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "verify": "npm run typecheck && npm run lint && npm run format:check && npm run test:coverage && npm run build"
   },
   "keywords": [
     "mcp",
     "model-context-protocol",
-    "macos",
-    "tauri",
     "apple-hig",
-    "desktop-styling",
+    "macos",
+    "ipados",
+    "ios",
+    "liquid-glass",
+    "tauri",
     "zero-shift"
   ],
-  "author": "Paylabs Team",
-  "license": "MIT"
+  "author": "Ahmad",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.19.2",
+    "@vitest/coverage-v8": "^5.0.5",
+    "eslint": "^10.13.0",
+    "prettier": "^3.9.10",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.72.1",
+    "vitest": "^5.0.5"
+  }
 }
